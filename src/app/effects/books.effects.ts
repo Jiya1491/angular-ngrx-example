@@ -1,17 +1,14 @@
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { Store } from "@ngrx/store";
 import { catchError, from, map, of, switchMap } from "rxjs";
 import { loadBooks, loadBooksFailure, loadBooksSuccess } from "../actions/books.actions";
 import { BooksService } from "../services/books.service";
-import { BooksState } from "../state/books.state";
 
 @Injectable()
 export class BooksEffects {
     
     constructor(
         private action$: Actions,
-        private store: Store<BooksState>,
         private booksService: BooksService
     ) {}
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { select, Store } from '@ngrx/store';
-import { loadBooks } from "../actions/books.actions";
-import { getAllBooks } from "../selectors/books.selectors";
+import { loadBooks } from "../../actions/books.actions";
+import { getAllBooks } from "../../selectors/books.selectors";
 
 @Component({
     selector: 'app-books',
