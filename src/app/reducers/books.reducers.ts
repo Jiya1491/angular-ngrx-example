@@ -1,12 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { loadBooks, loadBooksFailure, loadBooksSuccess } from '../actions/books.actions';
-import { Books } from '../models/books.model';
-
-export interface BooksState {
-    books: Books[];
-    error: string;
-    status: 'pending' | 'loading' | 'error' | 'success';
-}
+import { BooksState } from '../state/books.state';
 
 export const initialState: BooksState = {
     books: [],

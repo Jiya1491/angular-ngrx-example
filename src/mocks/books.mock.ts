@@ -1,5 +1,5 @@
 export const BOOKS = [
-    { id: 1, title: 'First Book', author: 'Author 1'},
+    { id: 1, title: 'First Book', author: 'John Barry'},
     { id: 2, title: 'Second Book', author: 'Author 2'},
     { id: 3, title: 'Third Book', author: 'Author 3'},
     { id: 4, title: 'Fourth Book', author: 'Author 4'},

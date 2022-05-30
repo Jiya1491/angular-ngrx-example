@@ -3,8 +3,8 @@ import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { Store } from "@ngrx/store";
 import { catchError, from, map, of, switchMap } from "rxjs";
 import { loadBooks, loadBooksFailure, loadBooksSuccess } from "../actions/books.actions";
-import { BooksState } from "../reducers/books.reducers";
 import { BooksService } from "../services/books.service";
+import { BooksState } from "../state/books.state";
 
 @Injectable()
 export class BooksEffects {

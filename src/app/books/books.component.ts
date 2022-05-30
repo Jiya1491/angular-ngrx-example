@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
+import { loadBooks } from "../actions/books.actions";
+import { getAllBooks } from "../selectors/books.selectors";
 
 @Component({
     selector: 'app-books',
@@ -8,10 +10,11 @@ import { Store } from '@ngrx/store';
 })
 export class BooksComponent implements OnInit {
     
-    public books:any;
-    constructor(private store: Store<) {}
+    constructor(private store: Store) {}
+
+    public allBooks = this.store.pipe(select(getAllBooks));
 
     ngOnInit() {
-        this.books = this.booksService.getBooks();
+        this.store.dispatch(loadBooks());
     }
 }

@@ -1,4 +1,4 @@
-import { BooksState } from "../reducers/books.reducers";
+import { BooksState } from "./books.state";
 
 export interface AppState {
     books: BooksState;

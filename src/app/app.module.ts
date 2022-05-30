@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { booksReducer } from './reducers/books.reducers';
+import { BooksEffects } from './effects/books.effects';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,8 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([])
+    StoreModule.forRoot({books: booksReducer}),
+    EffectsModule.forRoot([BooksEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
